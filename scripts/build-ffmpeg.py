@@ -135,13 +135,13 @@ if not os.path.exists(output_tarball):
             name="fribidi",
             source_url="https://github.com/fribidi/fribidi/releases/download/v1.0.11/fribidi-1.0.11.tar.xz",
         ),
-        #Package(
-        #    name="libwebp",
-        #    requires=["cmake"],
-        #    source_filename="libwebp-1.2.4.tar.gz",
-        #    source_url="https://codeload.github.com/webmproject/libwebp/tar.gz/refs/tags/v1.2.4",
-        #    build_system="cmake",
-        #),
+        Package(
+            name="webp",
+            requires=["cmake"],
+            source_filename="libwebp-1.2.4.tar.gz",
+            source_url="https://codeload.github.com/webmproject/libwebp/tar.gz/refs/tags/v1.2.4",
+            build_system="cmake",
+        ),
         Package(
             name="harfbuzz",
             requires=["freetype"],
@@ -351,7 +351,7 @@ if not os.path.exists(output_tarball):
                 "--enable-libvpx",
                 "--enable-libx264",
                 "--enable-libx265",
-                #"--enable-libwebp",
+                "--enable-libwebp",
                 "--enable-libxcb"
                 if platform.system() == "Linux"
                 else "--disable-libxcb",
