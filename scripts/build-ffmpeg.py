@@ -136,6 +136,10 @@ if not os.path.exists(output_tarball):
             source_url="https://github.com/fribidi/fribidi/releases/download/v1.0.11/fribidi-1.0.11.tar.xz",
         ),
         Package(
+            name="libwebp",
+            source_url="https://codeload.github.com/webmproject/libwebp/tar.gz/refs/tags/v1.2.4",
+        ),
+        Package(
             name="harfbuzz",
             requires=["freetype"],
             source_url="https://github.com/harfbuzz/harfbuzz/releases/download/4.1.0/harfbuzz-4.1.0.tar.xz",
@@ -312,10 +316,11 @@ if not os.path.exists(output_tarball):
                 "vorbis",
                 "vpx",
                 "x264",
-                "x265",
+                #"x265",
                 "xml2",
                 "xvid",
                 "xz",
+                "webp",
             ],
             source_url="https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz",
             build_arguments=[
@@ -342,7 +347,8 @@ if not os.path.exists(output_tarball):
                 "--enable-libvorbis",
                 "--enable-libvpx",
                 "--enable-libx264",
-                "--enable-libx265",
+                #"--enable-libx265",
+                "--enable-libwebp",
                 "--enable-libxcb"
                 if platform.system() == "Linux"
                 else "--disable-libxcb",
