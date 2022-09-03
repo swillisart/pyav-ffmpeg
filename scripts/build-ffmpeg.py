@@ -316,7 +316,7 @@ if not os.path.exists(output_tarball):
                 "vorbis",
                 "vpx",
                 "x264",
-                #"x265",
+                "x265",
                 "xml2",
                 "xvid",
                 "xz",
@@ -347,7 +347,7 @@ if not os.path.exists(output_tarball):
                 "--enable-libvorbis",
                 "--enable-libvpx",
                 "--enable-libx264",
-                #"--enable-libx265",
+                "--enable-libx265",
                 "--enable-libwebp",
                 "--enable-libxcb"
                 if platform.system() == "Linux"
