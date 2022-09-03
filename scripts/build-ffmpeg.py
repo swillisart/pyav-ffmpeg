@@ -141,6 +141,7 @@ if not os.path.exists(output_tarball):
             source_filename="libwebp-1.2.4.tar.gz",
             source_url="https://codeload.github.com/webmproject/libwebp/tar.gz/refs/tags/v1.2.4",
             build_system="cmake",
+            build_dir=".",
         ),
         Package(
             name="harfbuzz",
